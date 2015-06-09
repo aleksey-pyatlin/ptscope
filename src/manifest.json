@@ -1,0 +1,14 @@
+{
+  "name": "Pivotal Scope Finder",
+  "description": "Highlights Scope in Pivotal",
+  "version": "1.0",
+  "permissions": [
+    "http://*.planitpoker.com/board/*"
+  ],
+  "content_scripts": [ {
+      "js": [ "mutation-summary.js", "content.js", "jquery-2.1.4.min.js", "underscore-min.js" ],
+      "matches": [ "https://*.pivotaltracker.com/*" ],
+      "run_at": "document_start"
+  }],
+  "manifest_version": 2
+}
